@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {ProvisionservicesComponent} from './workcertificate/provisionservices/provisionservices.component';
+import {BaseComponent} from './workcertificate/base/base.component';
 
 
-const routes: Routes = [
-  {path: '', component: ProvisionservicesComponent}
-]
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
