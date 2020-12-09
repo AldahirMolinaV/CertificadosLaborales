@@ -10,6 +10,7 @@ import { SimpleComponent } from './workcertificate/simple/simple.component';
 import { BaseComponent } from './workcertificate/base/base.component';
 import { ProvisionservicesComponent } from './workcertificate/provisionservices/provisionservices.component';
 import {AppRoutingModule} from './app-routing.module'; // fonts provided for pdfmake
+import { HttpClientModule } from '@angular/common/http';
 
 PdfMakeWrapper.setFonts(pdfFonts);
 
@@ -23,6 +24,7 @@ PdfMakeWrapper.setFonts(pdfFonts);
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
