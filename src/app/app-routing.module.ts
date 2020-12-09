@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {ProvisionservicesComponent} from './workcertificate/provisionservices/provisionservices.component';
+import { SimpleComponent } from './workcertificate/simple/simple.component';
 
 
 const routes: Routes = [
-  {path: '', component: ProvisionservicesComponent}
+  {path: 'provisionservices', component: ProvisionservicesComponent},
+  {path: 'simple', component: SimpleComponent}
 ]
 
 @NgModule({
