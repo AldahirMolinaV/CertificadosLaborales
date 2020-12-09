@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Img, PdfMakeWrapper, Txt} from 'pdfmake-wrapper';
+import {GeneratecertificateService} from './services/generatecertificate.service';
 
 
 @Component({
@@ -9,5 +9,8 @@ import {Img, PdfMakeWrapper, Txt} from 'pdfmake-wrapper';
 })
 export class AppComponent {
   title = 'FrontCertificadosLaborales';
-  constructor(){}
+  constructor(private generatecertificateService: GeneratecertificateService){}
+  conexion() {
+    this.generatecertificateService.getConexion();
+  }
 }
