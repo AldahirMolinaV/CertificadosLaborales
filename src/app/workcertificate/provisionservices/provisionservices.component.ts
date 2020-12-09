@@ -15,7 +15,7 @@ export class ProvisionservicesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
+  
   async certificadoPrestacionDeServicios() {
     const pdf = new PdfMakeWrapper();
     pdf.pageMargins([80, 50, 80, 130]);
