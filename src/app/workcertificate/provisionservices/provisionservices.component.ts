@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Img, PdfMakeWrapper, Txt} from 'pdfmake-wrapper';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-provisionservices',
+  templateUrl: './provisionservices.component.html',
+  styleUrls: ['./provisionservices.component.css']
 })
-export class AppComponent {
-  title = 'FrontCertificadosLaborales';
-  constructor(){}
+export class ProvisionservicesComponent implements OnInit {
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 
   // tslint:disable-next-line:typedef
-  /*
   async certificadoPrestacionDeServicios() {
     const pdf = new PdfMakeWrapper();
     pdf.pageMargins([80, 50, 80, 130]);
@@ -50,5 +53,7 @@ export class AppComponent {
       await new Img('./assets/footer.PNG').width(600).build()
     );
     pdf.create().open();
-  }*/
+  }
 }
+
+
