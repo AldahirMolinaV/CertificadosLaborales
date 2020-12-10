@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {Img, PdfMakeWrapper, Txt} from 'pdfmake-wrapper';
 import {GeneratecertificateService} from '../../services/generatecertificate.service';
-
+import {DatePipe} from "@angular/common";
 
 
 @Component({
   selector: 'app-provisionservices',
   templateUrl: './provisionservices.component.html',
-  styleUrls: ['./provisionservices.component.css']
+  styleUrls: ['./provisionservices.component.css'],
+  providers: [DatePipe]
 })
 export class ProvisionservicesComponent implements OnInit {
 
-  constructor(private generatecertificateService: GeneratecertificateService) {
-  }
+  constructor(private generatecertificateService: GeneratecertificateService,
+              private datePipe: DatePipe) {}
   sofkiano: any = {};
   date: any ={};
 
@@ -43,7 +44,7 @@ export class ProvisionservicesComponent implements OnInit {
         ' identificada con cédula de extranjería No. '+ this.sofkiano.documento +'; tuvo un Contrato de Prestación' +
         ' de Servicios con la compañía desde el día 24 de abril de 2019 hasta el 1 de' +
         ' noviembre de 2019 como '+ this.sofkiano.cargo +' y tenia unos honorarios de' +
-        ' $'+ this.sofkiano.salario +' (NÚMEROS EN LETRAS).\n\n' +
+        ' $'+ this.sofkiano.salario.nume +' (NÚMEROS EN LETRAS).\n\n' +
         'Para alguna verificación puedes comunicarte a los siguientes números de' +
         ' contacto (4)2668907 o 3164975106.\n' + '\n\n' +
         'Se firma a solicitud del interesado a los XX días del mes de agosto de 2020')

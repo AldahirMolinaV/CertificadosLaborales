@@ -39,7 +39,7 @@ export class FullComponent implements OnInit {
         .alignment('justify').end
     );
     pdf.add(pdf.ln(3));
-    pdf.add(new Txt('Atentamente,').end);
+    pdf.add(new Txt('Atentamente,\n\n').end);
     pdf.add(
       await new Img('./assets/Firma.PNG').build()
     );
