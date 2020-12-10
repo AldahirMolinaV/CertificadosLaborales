@@ -9,7 +9,7 @@ import { FullComponent } from './certificates/full/full.component';
 import { SimpleComponent } from './certificates/simple/simple.component';
 import { BaseComponent } from './certificates/base/base.component';
 import { ProvisionservicesComponent } from './certificates/provisionservices/provisionservices.component';
-import {AppRoutingModule} from './app-routing.module'; // fonts provided for pdfmake
+import {AppRoutingModule} from './app-routing.module';
 import { NavComponent } from './common/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
