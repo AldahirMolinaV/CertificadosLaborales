@@ -14,14 +14,14 @@ export class GeneratecertificateService {
   url = 'http://localhost';
 
   getConexion() {
-    return this.http.get(this.url + ':8080/certificadoLaboral')
-      .subscribe(data => {   // data is already a JSON object
+    return this.http.get(this.url + ':8081/certificadoLaboral')
+      .subscribe(data => {
         console.log(data);
       });
   }
 
   getSofkiano(){
-    return this.http.get<Sofkiano>(this.url + ':8080/certificadoLaboral/12345678/indefinido');
+    return this.http.get<Sofkiano>(this.url + ':8081/certificadoLaboral/1152702267/Indefinido');
   }
 
   getDateDay(){
